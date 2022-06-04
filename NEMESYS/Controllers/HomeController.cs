@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NEMESYS.Models;
 using System;
@@ -12,6 +14,14 @@ namespace NEMESYS.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        //Connection with reportDB
+        private readonly ConnectionStringClass _cc;
+
+        [ActivatorUtilitiesConstructor]
+        public HomeController(ConnectionStringClass cc)
+        {
+            _cc = cc;
+        }
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -37,6 +47,17 @@ namespace NEMESYS.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateReport(ReportClass report)
+        {
+            _cc.Add(report);
+            _cc.SaveChanges();
+            ViewBag.message = "The record " + report.ReportTitle + " is saved successfully !";
+            return View(report);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
