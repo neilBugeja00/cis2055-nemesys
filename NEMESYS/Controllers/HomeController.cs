@@ -28,6 +28,11 @@ namespace NEMESYS.Controllers
             return View();
         }
 
+        public IActionResult HallOfFame()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
