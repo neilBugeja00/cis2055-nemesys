@@ -31,6 +31,8 @@ namespace NEMESYS.Models
         public string ReporterEmail { get; set; }
         public string ReporterMobile { get; set; }
         public string HazardStatus { get; set; }
+        public string HazardPhoto { get; set; }
+        public string HazardUpvotes { get; set; }
 
     }
 }

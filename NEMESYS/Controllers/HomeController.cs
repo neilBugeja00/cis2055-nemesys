@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NEMESYS.Areas.Identity.Data;
@@ -20,17 +21,21 @@ namespace NEMESYS.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ConnectionStringClass _cc;
         private readonly UserManager<NEMESYSUser> _userManager;
+        private ConnectionStringClass _context { get; }
 
-        public HomeController(ILogger<HomeController> logger, ConnectionStringClass cc, UserManager<NEMESYSUser> userManager)
+        public HomeController(ILogger<HomeController> logger, ConnectionStringClass cc, UserManager<NEMESYSUser> userManager, ConnectionStringClass context)
         {
             _logger = logger;
             _cc = cc;
             _userManager =userManager;
+            _context = context; 
         }
 
         public IActionResult Index()
         {
-            return View();
+            List<ReportClass> reports = (from report in this._context.Reports.Take(10)
+                                        select report).ToList();
+            return View(reports);
         }
 
         public IActionResult Privacy()

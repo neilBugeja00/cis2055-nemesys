@@ -2,7 +2,20 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h4>Reports</h4>
+    <hr/>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>ReportID</th>
+            <th>ReportTitle</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        @foreach (ReportClass report in Model)
+        {
+            <tr>
+                <td>@report.ReportID</td>
+                <td>@report.ReportTitle</td>
+            </tr>
+        }
+    </table>

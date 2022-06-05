@@ -477,7 +477,6 @@ C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Areas\Iden
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\CreateReport.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\HallOfFame.cshtml.g.cs
-C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -494,3 +493,5 @@ C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\refint\NEMESYS.d
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\NEMESYS.pdb
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\NEMESYS.genruntimeconfig.cache
 C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\ref\NEMESYS.dll
+C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\neilb\Desktop\Neil\Web 3\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\IndexView.cshtml.g.cs
