@@ -7468,11 +7468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\neilb\\Desktop\\Neil\\Web2\\NEMESYS\\NEMESYS.csproj",
+      "projectUniqueName": "C:\\Users\\neilb\\Desktop\\Neil\\Web 3\\Web2\\NEMESYS\\NEMESYS.csproj",
       "projectName": "NEMESYS",
-      "projectPath": "C:\\Users\\neilb\\Desktop\\Neil\\Web2\\NEMESYS\\NEMESYS.csproj",
+      "projectPath": "C:\\Users\\neilb\\Desktop\\Neil\\Web 3\\Web2\\NEMESYS\\NEMESYS.csproj",
       "packagesPath": "C:\\Users\\neilb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\neilb\\Desktop\\Neil\\Web2\\NEMESYS\\obj\\",
+      "outputPath": "C:\\Users\\neilb\\Desktop\\Neil\\Web 3\\Web2\\NEMESYS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\neilb\\AppData\\Roaming\\NuGet\\NuGet.Config",

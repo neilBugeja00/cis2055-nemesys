@@ -4,7 +4,6 @@ namespace NEMESYS.Models
 {
     public class ReportClass
     {
-        private string reporterFirstName="test";
 
         [Key]
         public int ReportID { get; set; }
@@ -27,11 +26,11 @@ namespace NEMESYS.Models
         [Required]
         public string HazardDescription { get; set; }
 
-        public string ReporterFirstName
-        {
-            get { return reporterFirstName; }
-            set { reporterFirstName = value; }
-        }
+        public string ReporterFirstName { get; set; }
+        public string ReporterLastName { get; set; }
+        public string ReporterEmail { get; set; }
+        public string ReporterMobile { get; set; }
+        public string HazardStatus { get; set; }
 
     }
 }

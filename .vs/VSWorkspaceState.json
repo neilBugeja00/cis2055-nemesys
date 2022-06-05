@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NEMESYS",
+    "\\NEMESYS\\Controllers"
   ],
-  "SelectedNode": "\\NEMESYS.sln",
+  "SelectedNode": "\\NEMESYS\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }

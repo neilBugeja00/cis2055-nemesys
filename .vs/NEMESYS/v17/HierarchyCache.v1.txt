@@ -1,0 +1,235 @@
+﻿++Solution 'NEMESYS' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:NEMESYS.sln
+++NEMESYS
+i:{00000000-0000-0000-0000-000000000000}:NEMESYS
+++Connected Services 
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>741
+++Dependencies
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>740
+++Properties
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\properties\
+++wwwroot
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\
+++Areas
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\
+++Controllers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\controllers\
+++Migrations
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\migrations\
+++Models
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\models\
+++Views
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\
+++appsettings.json
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\appsettings.json
+++Program.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\program.cs
+++ScaffoldingReadMe.txt
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\scaffoldingreadme.txt
+++Startup.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\startup.cs
+++SQL Server Express LocalDB (Local) (ConnectionStrings:AuthDbContextConnection)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>767
+++Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:analyzers
+++Frameworks
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:frameworks
+++Packages
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:packages
+++launchSettings.json
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\properties\launchsettings.json
+++serviceDependencies.json
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\properties\servicedependencies.json
+++css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\css\
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\
+++js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\js\
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\
+++favicon.ico
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\favicon.ico
+++Identity
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\
+++HomeController.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\controllers\homecontroller.cs
+++20220603194954_Initial-Create.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\migrations\20220603194954_initial-create.cs
+++AuthDbContextModelSnapshot.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\migrations\authdbcontextmodelsnapshot.cs
+++ConnectionStringClass.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\models\connectionstringclass.cs
+++ErrorViewModel.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\models\errorviewmodel.cs
+++ReportClass.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\models\reportclass.cs
+++Home
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\home\
+++Shared
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\shared\
+++_ViewImports.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\_viewimports.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\_viewimports.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\account\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\_viewstart.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\_viewstart.cshtml
+++appsettings.Development.json
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.17\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\microsoft.netcore.app
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.17)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>755
+++Microsoft.AspNetCore.Identity.UI (5.0.17)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>758
+++Microsoft.EntityFrameworkCore.Design (5.0.17)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>754
+++Microsoft.EntityFrameworkCore.SqlServer (5.0.17)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>753
+++Microsoft.EntityFrameworkCore.Tools (5.0.17)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>756
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (5.0.2)
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:>757
+++serviceDependencies.local.json
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\properties\servicedependencies.local.json
+++site.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\css\site.css
+++site.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\js\site.js
+++bootstrap
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\
+++jquery
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery\
+++jquery-validation
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation-unobtrusive\
+++Data
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\data\
+++Pages
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\
+++IdentityHostingStartup.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\identityhostingstartup.cs
+++20220603194954_Initial-Create.Designer.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\migrations\20220603194954_initial-create.designer.cs
+++CreateReport.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\home\createreport.cshtml
+++HallOfFame.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\home\halloffame.cshtml
+++Index.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\home\index.cshtml
+++Privacy.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\home\privacy.cshtml
+++_Layout.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\shared\_layout.cshtml
+++_LoginPartial.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\shared\_loginpartial.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\shared\_validationscriptspartial.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\views\shared\error.cshtml
+++dist
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery\dist\
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery\license.txt
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++AuthDbContext.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\data\authdbcontext.cs
+++NEMESYSUser.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\data\nemesysuser.cs
+++Account
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\account\
+++_AuthLayout.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\_authlayout.cshtml
+++jquery.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++Login.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\account\login.cshtml
+++Register.cshtml
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\account\register.cshtml
+++bootstrap.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++Login.cshtml.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\account\login.cshtml.cs
+++Register.cshtml.cs
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\areas\identity\pages\account\register.cshtml.cs
+++bootstrap.css.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap-grid.css.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-reboot.css.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap.bundle.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.js.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap-grid.min.css.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-reboot.min.css.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap.bundle.js.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.min.js.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.bundle.min.js.map
+i:{d188e65c-fb4e-486b-8f4f-05fc86a86e46}:c:\users\neilb\desktop\neil\web 3\web2\nemesys\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
