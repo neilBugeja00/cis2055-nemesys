@@ -32,7 +32,7 @@ namespace NEMESYS.Models
         public string ReporterMobile { get; set; }
         public string HazardStatus { get; set; }
         public string HazardPhoto { get; set; }
-        public string HazardUpvotes { get; set; }
+        public string HazardUpvotes { get; set; }       
 
     }
 }

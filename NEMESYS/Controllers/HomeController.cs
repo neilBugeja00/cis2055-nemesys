@@ -28,7 +28,7 @@ namespace NEMESYS.Controllers
             _logger = logger;
             _cc = cc;
             _userManager =userManager;
-            _context = context; 
+            _context = context;
         }
 
         public IActionResult Index()
@@ -36,6 +36,43 @@ namespace NEMESYS.Controllers
             List<ReportClass> reports = (from report in this._cc.Reports.Take(1000)
                                         select report).ToList();
             return View(reports);
+        }
+
+        public async Task<ReportClass> GetReportById(int id)
+        {
+            var report = await _context.Reports.FindAsync(id);
+
+            if (report != null)
+            {
+                var reportDetails = new ReportClass()
+                {
+                    ReportDate = report.ReportDate,
+                    HazardLocation = report.HazardLocation,
+                    HazardType = report.HazardType,
+                    HazardDate = report.HazardDate,
+                    HazardPhoto = report.HazardPhoto,
+                    HazardDescription = report.HazardDescription,
+                    HazardUpvotes = report.HazardUpvotes,
+                    ReporterFirstName = report.ReporterFirstName,
+                    ReporterLastName = report.ReporterLastName,
+                    ReporterEmail = report.ReporterEmail,
+                    ReporterMobile = report.ReporterMobile,
+                    ReportTitle = report.ReportTitle,
+                    HazardStatus = report.HazardStatus
+                };
+
+                return reportDetails;
+            }
+
+            return null;
+        }
+
+        [Route("report-details/{id}", Name = "reportDetailsRoute")]
+        public async Task<ViewResult> GetReportDetails(int id)
+        {
+            var data = await GetReportById(id);
+
+            return View(data);
         }
 
         public IActionResult Privacy()
