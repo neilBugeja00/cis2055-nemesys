@@ -2,20 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h4>Reports</h4>
-    <hr/>
-    <table cellpadding="0" cellspacing="0">
-        <tr>
-            <th>ReportID</th>
-            <th>ReportTitle</th>
-            <th>City</th>
-            <th>Country</th>
-        </tr>
-        @foreach (ReportClass report in Model)
-        {
-            <tr>
-                <td>@report.ReportID</td>
-                <td>@report.ReportTitle</td>
-            </tr>
-        }
-    </table>
+<h1>Reports</h1>
+<hr />
+<div class="row">
+@foreach (ReportClass report in Model)
+{
+    
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h3 class="card-title">@report.ReportTitle</h3>
+                <p class="card-text">@report.HazardDescription</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a asp-route="reportDetailsRoute" asp-route-id="@report.ReportID"
+                        class="btn-primary btn-sm btn-outline-secondary">View Details</a>
+                    </div>
+                    <small class="text-muted">@report.ReporterFirstName @report.ReporterLastName</small>
+                </div>
+            </div>
+        </div>
+    </div>    
+}
+</div>

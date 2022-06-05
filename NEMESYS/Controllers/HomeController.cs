@@ -33,7 +33,7 @@ namespace NEMESYS.Controllers
 
         public IActionResult Index()
         {
-            List<ReportClass> reports = (from report in this._context.Reports.Take(10)
+            List<ReportClass> reports = (from report in this._cc.Reports.Take(1000)
                                         select report).ToList();
             return View(reports);
         }
