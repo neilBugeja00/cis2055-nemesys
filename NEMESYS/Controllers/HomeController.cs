@@ -278,6 +278,55 @@ namespace NEMESYS.Controllers
             return View(userReports);
         }
 
+        [Route("investigatorStatus-edit/{id}", Name = "editInvestigationStatusRoute")]
+        public async Task<ViewResult> EditInvestigationStatusRoute(int id)
+        {
+            //populating dropdown
+            List<SelectListItem> typesOfStatus = new()
+            {
+                new SelectListItem { Value = "1", Text = "Being Worked On" },
+                new SelectListItem { Value = "2", Text = "Closed" },
+                new SelectListItem { Value = "3", Text = "No Action Needed" }
+            };
+            ViewBag.typesOfStatus = typesOfStatus;
+
+            var data = await editReportById(id);
+
+            return View(data);
+        }
+
+
+        [Route("investigatorStatus-edit/{id}", Name = "editInvestigationStatusRoute")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ViewResult> EditInvestigationStatusRoute(int id, ReportClass reportClass)
+        {
+            var report = await _context.Reports.FindAsync(id);
+
+            //setting variables of report (in sql) equal to variables of form
+            report.HazardStatus = reportClass.HazardStatus;
+
+            //Converting dropdown answer (1,2,3) into proper values
+            if (reportClass.HazardStatus == "1")
+            {
+                report.HazardStatus = "Being Worked On";
+            }
+            else if (reportClass.HazardStatus == "2")
+            {
+                report.HazardStatus = "Closed";
+            }
+            else if (reportClass.HazardStatus == "3")
+            {
+                report.HazardStatus = "No Action Needed";
+            }
+
+            _cc.Update(report);
+            _cc.SaveChanges();
+            ViewBag.messageReportStatusEditted = "The report status is editted successfully !";
+            return View();
+        }
+
+
         [Authorize]
         public IActionResult CreateReport()
         {
