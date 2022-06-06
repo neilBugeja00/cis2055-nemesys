@@ -664,3 +664,4 @@ C:\Users\neilb\Desktop\Neil\Web 4\Web2\NEMESYS\obj\Debug\net5.0\ref\NEMESYS.dll
 C:\Users\neilb\Desktop\Neil\Web 4\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\GetReportDetails.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 4\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\EditUserReport.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web 4\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\EditReport.cshtml.g.cs
+C:\Users\neilb\Desktop\Neil\Web 4\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\DeleteReport.cshtml.g.cs

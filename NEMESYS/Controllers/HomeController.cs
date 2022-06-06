@@ -145,6 +145,7 @@ namespace NEMESYS.Controllers
             return View(data);
         }
 
+
         [Route("report-edit/{id}", Name = "editReportRoute")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -159,6 +160,26 @@ namespace NEMESYS.Controllers
             _cc.Update(report);
             _cc.SaveChanges();
             ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is editted successfully !";
+            return View();
+        }
+
+        [Route("report-delete/{id}", Name = "deleteReportRoute")]
+        public async Task<ViewResult> DeleteReport(int id)
+        {
+            var data = await editReportById(id);
+
+            return View(data);
+        }
+
+        [Route("report-delete/{id}", Name = "deleteReportRoute")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteReport(int id, int test)
+        {
+            var report = await _context.Reports.FindAsync(id);
+            _cc.Remove(report);
+            _cc.SaveChanges();
+            ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is deleted successfully !";
             return View();
         }
 
