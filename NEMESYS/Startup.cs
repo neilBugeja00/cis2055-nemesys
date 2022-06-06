@@ -28,7 +28,12 @@ namespace NEMESYS
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<ConnectionStringClass>(options => options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddJsonOptions(o =>
+                {
+                    o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                    o.JsonSerializerOptions.PropertyNamingPolicy = null;
+                });
             services.AddRazorPages();
         }
 
