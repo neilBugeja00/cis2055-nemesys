@@ -7,7 +7,7 @@
 @model ReportClass
 
 <div class="container">
-        <h3 class="display-4">ReportClass Details</h3>
+        <h3 class="display-4">Details</h3>
         <div class="row">
             <div class="col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -71,5 +71,9 @@
                     <li class="list-group-item"><span class="font-weight-bold">Report Date      - </span> @Model.ReportDate</li>
                     
                 </ul>
+
+    </div>
+    <div>
+        <a asp-action="Index">Back to Home</a>
     </div>
 </div>
