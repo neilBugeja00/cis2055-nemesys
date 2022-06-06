@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -188,10 +189,25 @@ namespace NEMESYS.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Investigator")]
+        public IActionResult InvestigateReport()
+        {
+            return View();
+        }
+
 
         [Authorize]
         public IActionResult CreateReport()
         {
+            //populating dropdown
+            List<SelectListItem> typesOfHazards = new()
+            {
+                new SelectListItem { Value = "1", Text = "Unsafe act" },
+                new SelectListItem { Value = "2", Text = "Condition" },
+                new SelectListItem { Value = "3", Text = "Equipment" }
+            };
+            ViewBag.typesOfHazards = typesOfHazards;
+
             return View();
         }
 
@@ -220,6 +236,19 @@ namespace NEMESYS.Controllers
                 report.ReporterMobile = mobile.ToString();
             }
 
+            //Converting dropdown answer (1,2,3) into proper values
+            if (report.HazardType == "1")
+            {
+                report.HazardType = "Unsafe act";
+            }else if (report.HazardType == "2")
+            {
+                report.HazardType = "Condition";
+            }else if (report.HazardType == "3")
+            {
+                report.HazardType = "Equipment";
+            }
+
+            //saving data
             _cc.Add(report);
             _cc.SaveChanges();
             ViewBag.messageReportSubmitted = "The report " + report.ReportTitle + " is saved successfully !";
