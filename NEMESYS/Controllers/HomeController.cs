@@ -215,12 +215,68 @@ namespace NEMESYS.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Investigator")]
+        [Authorize]
         public IActionResult InvestigateReport()
         {
-            return View();
+            List<ReportClass> reports = (from report in this._cc.Reports.Take(1000)
+                                         select report).ToList();
+            return View(reports);
         }
 
+        
+        [Route("investigate-details/{id}", Name = "investigateReportRoute")]
+        public async Task<ViewResult> InvestigateReportDetails(int id)
+        {
+            var data = await GetReportById(id);
+
+            return View(data);
+        }
+
+        [Route("investigate-details/{id}", Name = "investigateReportRoute")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> InvestigateReportDetails(int id, int test)
+        {
+            var report = await _context.Reports.FindAsync(id);
+
+            var user = _userManager.GetUserAsync(HttpContext.User);
+
+            //getting data from logged in user
+            var email = user.Result.Email;
+
+            report.Investigator = email;
+            _cc.Update(report);
+            _cc.SaveChanges();
+            ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is being investigated by you !";
+            return View("HallOfFame");
+        }
+
+        [Authorize]
+        public IActionResult UserInvestigatingReports()
+        {
+            var user = _userManager.GetUserAsync(HttpContext.User);
+
+            //user email
+            var email = user.Result.Email;
+
+            //list of all reports
+            List<ReportClass> reports = (from report in this._cc.Reports.Take(1000)
+                                         select report).ToList();
+
+            //Empty list of user reports
+            List<ReportClass> userReports = new List<ReportClass>();
+
+            //Loop traverses all reports and stores reports with matching user email to list of user reports
+            foreach (ReportClass report in reports)
+            {
+                if (email == report.Investigator)
+                {
+                    userReports.Add(report);
+                }
+            }
+
+            return View(userReports);
+        }
 
         [Authorize]
         public IActionResult CreateReport()
