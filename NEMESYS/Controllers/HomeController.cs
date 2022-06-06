@@ -140,27 +140,33 @@ namespace NEMESYS.Controllers
         [Route("report-edit/{id}", Name = "editReportRoute")]
         public async Task<ViewResult> EditReport(int id)
         {
-            //var data = await editReportById(id);
+            var data = await editReportById(id);
 
-            //return View(data);
-            return View();
+            return View(data);
         }
 
+        [Route("report-edit/{id}", Name = "editReportRoute")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditReport(ReportClass report)
+        public async Task<ViewResult> EditReport(int id, ReportClass reportClass)
         {
-            report.ReportTitle = "Manually edit";
-            _cc.Entry(report).State = EntityState.Modified;
+            var report = await _context.Reports.FindAsync(id);
+            report.ReportTitle = reportClass.ReportTitle;
+            report.HazardLocation = reportClass.HazardLocation;
+            report.HazardType = reportClass.HazardType;
+            report.HazardDate = reportClass.HazardDate;
+            report.HazardDescription = reportClass.HazardDescription;
+            _cc.Update(report);
             _cc.SaveChanges();
-            ViewBag.messageReportEditted = "The record " + report.ReportTitle + " is editted successfully !";
-            return View(report);
+            ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is editted successfully !";
+            return View();
         }
 
-            public IActionResult HallOfFame()
+        public IActionResult HallOfFame()
         {
             return View();
         }
+
 
         [Authorize]
         public IActionResult CreateReport()
