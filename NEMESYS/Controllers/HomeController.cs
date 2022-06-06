@@ -141,6 +141,15 @@ namespace NEMESYS.Controllers
         [Route("report-edit/{id}", Name = "editReportRoute")]
         public async Task<ViewResult> EditReport(int id)
         {
+            //populating dropdown
+            List<SelectListItem> typesOfHazards = new()
+            {
+                new SelectListItem { Value = "1", Text = "Unsafe act" },
+                new SelectListItem { Value = "2", Text = "Condition" },
+                new SelectListItem { Value = "3", Text = "Equipment" }
+            };
+            ViewBag.typesOfHazards = typesOfHazards;
+
             var data = await editReportById(id);
 
             return View(data);
@@ -151,13 +160,30 @@ namespace NEMESYS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ViewResult> EditReport(int id, ReportClass reportClass)
-        {
+        {            
             var report = await _context.Reports.FindAsync(id);
+
+            //setting variables of report (in sql) equal to variables of form
             report.ReportTitle = reportClass.ReportTitle;
             report.HazardLocation = reportClass.HazardLocation;
             report.HazardType = reportClass.HazardType;
             report.HazardDate = reportClass.HazardDate;
             report.HazardDescription = reportClass.HazardDescription;
+
+            //Converting dropdown answer (1,2,3) into proper values
+            if (reportClass.HazardType == "1")
+            {
+                report.HazardType = "Unsafe act";
+            }
+            else if (reportClass.HazardType == "2")
+            {
+                report.HazardType = "Condition";
+            }
+            else if (reportClass.HazardType == "3")
+            {
+                report.HazardType = "Equipment";
+            }
+
             _cc.Update(report);
             _cc.SaveChanges();
             ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is editted successfully !";
