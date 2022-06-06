@@ -1,63 +1,85 @@
-﻿@model NEMESYS.Models.ReportClass
-
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
 @{
-    ViewData["Title"] = "DeleteReport";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Delete Page";
 }
+@model ReportClass
 
-<h1>Delete Report</h1>
+<div class="container">
+        <h3 class="display-4">Details</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        
+                        @*@for (int i = 0; i < Model.Gallery.Count(); i++)
+                        {
+                            <li data-target="#carouselExampleIndicators" data-slide-to="@i" class="@(i==0 ? "active" : "") "></li>
+                        }
+                    </ol>
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < Model.Gallery.Count(); i++)
+                        {
+                            <div class="@(i==0 ? "carousel-item active" : "carousel-item") ">
+                                <img class="d-block w-100" src="@Model.Gallery[i].URL" alt="@Model.Gallery[i].Name">
+                            </div>
+                        }*@
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="DeleteReport">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ReportTitle" class="control-label">Report Title</label>
-                <input asp-for="ReportTitle" class="form-control" />
-                <span asp-validation-for="ReportTitle" class="text-danger"></span>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="HazardLocation" class="control-label">Location of Hazard</label>
-                <input asp-for="HazardLocation" class="form-control" />
-                <span asp-validation-for="HazardLocation" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HazardType" class="control-label">Type of Hazard</label>
-                <input asp-for="HazardType" class="form-control" />
-                <span asp-validation-for="HazardType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HazardPhoto" type="file"class="control-label">Picture of Hazard</label>
-                <input asp-for="HazardPhoto" type="file" class="form-control" />
-                <span asp-validation-for="HazardPhoto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HazardDate" class="control-label">Date and Time of Hazard</label>
-                <input asp-for="HazardDate" type="datetime-local" class="form-control" />
-                <span asp-validation-for="HazardDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HazardDescription" class="control-label">Description of Hazard</label>
-                <input asp-for="HazardDescription" class="form-control" />
-                <span asp-validation-for="HazardDescription" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Edit" class="btn btn-primary" />
-            </div>
-        </form>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>@Model.ReportTitle</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-primary">
+                        <span class="label label-primary">By: @Model.ReporterFirstName @Model.ReporterLastName</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="description">
+                            @Model.HazardDescription
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="font-weight-bold">Hazard Type      - </span> @Model.HazardType</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Hazard Photo      - </span> @Model.HazardPhoto</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Hazard Location  - </span> @Model.HazardLocation</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Hazard Status    - </span> @Model.HazardStatus</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Hazard Date      - </span> @Model.HazardDate</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Reporter Email   - </span> @Model.ReporterEmail</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Reporter Mobile  - </span> @Model.ReporterMobile</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Report Date      - </span> @Model.ReportDate</li>
+                    
+                </ul>
+
     </div>
+    <form asp-action="DeleteReport" href="Index">
+	<div class="form-group">
+              <input type="submit" value="Delete" class="btn btn-primary" href="Index"/>
+         </div>
+    </form>
 
-    <p>
-        @ViewBag.messageReportEditted
-    </p>
+    <div>
+        <a asp-action="Index">Back to Home</a>
+    </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to Home</a>
-</div>
-
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

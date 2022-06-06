@@ -207,7 +207,7 @@ namespace NEMESYS.Controllers
             _cc.Remove(report);
             _cc.SaveChanges();
             ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is deleted successfully !";
-            return View();
+            return View("HallOfFame");
         }
 
         public IActionResult HallOfFame()
