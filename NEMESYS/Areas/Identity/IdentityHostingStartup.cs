@@ -21,6 +21,7 @@ namespace NEMESYS.Areas.Identity
                         context.Configuration.GetConnectionString("AuthDbContextConnection")));
 
                 services.AddDefaultIdentity<NEMESYSUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
         }

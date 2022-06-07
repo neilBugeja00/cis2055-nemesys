@@ -215,7 +215,7 @@ namespace NEMESYS.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Investigator")]
         public IActionResult InvestigateReport()
         {
             List<ReportClass> reports = (from report in this._cc.Reports.Take(1000)
@@ -264,6 +264,7 @@ namespace NEMESYS.Controllers
             return View("HallOfFame");
         }
 
+        [Authorize(Roles = "Investigator")]
         [Authorize]
         public IActionResult UserInvestigatingReports()
         {
