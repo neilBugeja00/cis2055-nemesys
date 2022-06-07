@@ -1,0 +1,38 @@
+﻿@model NEMESYS.Models.InvestigationClass
+
+@{
+    ViewData["Title"] = "CreateInvestigationEntry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create Investigation Entry</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateInvestigationEntry">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="InvestigationDescription" class="control-label">Description of Investigation</label>
+                <input asp-for="InvestigationDescription" class="form-control" />
+                <span asp-validation-for="InvestigationDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    <p>
+        @ViewBag.messageInvestigationSubmitted
+    </p>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

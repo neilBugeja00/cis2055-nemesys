@@ -10,5 +10,6 @@ namespace NEMESYS.Models
         }
 
         public DbSet<ReportClass> Reports { get; set; }
+        public DbSet<InvestigationClass> Investigations { get; set; }
 }
 }

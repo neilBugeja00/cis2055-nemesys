@@ -840,3 +840,4 @@ C:\Users\neilb\Desktop\Neil\Web6\Web2\NEMESYS\obj\Debug\net5.0\ref\NEMESYS.dll
 C:\Users\neilb\Desktop\Neil\Web6\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\InvestigateReportDetails.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web6\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Home\UserInvestigatingReports.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web6\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\EditInvestigationStatusRoute.cshtml.g.cs
+C:\Users\neilb\Desktop\Neil\Web6\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\CreateInvestigationEntry.cshtml.g.cs

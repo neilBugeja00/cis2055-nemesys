@@ -325,7 +325,44 @@ namespace NEMESYS.Controllers
             ViewBag.messageReportStatusEditted = "The report status is editted successfully !";
             return View();
         }
+        
+        [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
+        public IActionResult CreateInvestigationEntry()
+        {
+            return View();
+        }
 
+        [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateInvestigationEntry(InvestigationClass investigation)
+        {
+            var user = _userManager.GetUserAsync(HttpContext.User);
+
+            //getting data from logged in user
+            var email = user.Result.Email;
+            var firstName = user.Result.FirstName;
+            var lastName = user.Result.LastName;
+            var mobile = user.Result.PhoneNumber;
+
+            //manually inputting data into report
+            investigation.InvestigatorEmail = email;
+            investigation.InvestigatorFirstName = firstName;
+            investigation.InvestigatorLastName = lastName;
+            investigation.InvestigationDate = DateTime.Now.ToShortDateString();
+
+            if (mobile != null)
+            {
+                investigation.InvestigatorMobile = mobile.ToString();
+            }
+
+
+            //saving data
+            _cc.Add(investigation);
+            _cc.SaveChanges();
+            ViewBag.messageInvestigationSubmitted = "The investigation entry is saved successfully !";
+            return View(investigation);
+        }
 
         [Authorize]
         public IActionResult CreateReport()
