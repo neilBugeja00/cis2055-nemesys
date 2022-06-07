@@ -349,7 +349,7 @@ namespace NEMESYS.Controllers
         [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateInvestigationEntry(InvestigationClass investigation, int id)
+        public async Task<IActionResult> CreateInvestigationEntry(InvestigationClass investigation, int id)
         {
             var user = _userManager.GetUserAsync(HttpContext.User);
 
@@ -359,7 +359,7 @@ namespace NEMESYS.Controllers
             var lastName = user.Result.LastName;
             var mobile = user.Result.PhoneNumber;
 
-            //manually inputting data into report
+            //manually inputting data into investigation
             investigation.InvestigatorEmail = email;
             investigation.InvestigatorFirstName = firstName;
             investigation.InvestigatorLastName = lastName;
@@ -371,10 +371,19 @@ namespace NEMESYS.Controllers
                 investigation.InvestigatorMobile = mobile.ToString();
             }
 
+            //get report
+            var report = await _context.Reports.FindAsync(id);
+            
 
             //saving data
             _cc.Add(investigation);
             _cc.SaveChanges();
+
+            String strInvestigationID = investigation.InvestigationID.ToString();
+            report.InvestigationEntryID = strInvestigationID;
+            _cc.Update(report);
+            _cc.SaveChanges();
+
             ViewBag.messageInvestigationSubmitted = "The investigation entry is saved successfully !";
             return View(investigation);
         }
