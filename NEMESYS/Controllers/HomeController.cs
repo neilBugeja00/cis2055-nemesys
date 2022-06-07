@@ -220,7 +220,20 @@ namespace NEMESYS.Controllers
         {
             List<ReportClass> reports = (from report in this._cc.Reports.Take(1000)
                                          select report).ToList();
-            return View(reports);
+
+            //Empty list of user reports
+            List<ReportClass> userReports = new List<ReportClass>();
+
+            //Loop traverses all reports and stores reports with matching user email to list of user reports
+            foreach (ReportClass report in reports)
+            {
+                if (report.Investigator==null)
+                {
+                    userReports.Add(report);
+                }
+            }
+
+            return View(userReports);
         }
 
         
