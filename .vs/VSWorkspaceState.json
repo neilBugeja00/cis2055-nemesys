@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\NEMESYS",
-    "\\NEMESYS\\Controllers"
+    "\\NEMESYS\\Controllers",
+    "\\NEMESYS\\Views",
+    "\\NEMESYS\\Views\\Shared"
   ],
-  "SelectedNode": "\\NEMESYS.sln",
+  "SelectedNode": "\\NEMESYS\\Views\\Shared\\GetReportDetails.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -69,9 +69,18 @@
                     <li class="list-group-item"><span class="font-weight-bold">Reporter Email   - </span> @Model.ReporterEmail</li>
                     <li class="list-group-item"><span class="font-weight-bold">Reporter Mobile  - </span> @Model.ReporterMobile</li>
                     <li class="list-group-item"><span class="font-weight-bold">Report Date      - </span> @Model.ReportDate</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Report ID      - </span> @Model.ReportID</li>
                     
                 </ul>
-
+    <p>
+            @if (!String.Equals(Model.InvestigationEntryID , "0"))
+            {                
+                <div class="btn-group">
+                    <a asp-route="viewInvestigationEntryRoute" asp-route-id="@Model.ReportID"
+                     class="btn-primary btn-sm btn-outline-secondary">View Investigation Entry</a>
+                </div>
+            }
+    </p>
     </div>
     <div>
         <a asp-action="Index">Back to Home</a>

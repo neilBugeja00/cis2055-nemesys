@@ -49,6 +49,7 @@ namespace NEMESYS.Controllers
             {
                 var reportDetails = new ReportClass()
                 {
+                    ReportID = report.ReportID,
                     ReportDate = report.ReportDate,
                     HazardLocation = report.HazardLocation,
                     HazardType = report.HazardType,
@@ -61,7 +62,8 @@ namespace NEMESYS.Controllers
                     ReporterEmail = report.ReporterEmail,
                     ReporterMobile = report.ReporterMobile,
                     ReportTitle = report.ReportTitle,
-                    HazardStatus = report.HazardStatus
+                    HazardStatus = report.HazardStatus,
+                    InvestigationEntryID = report.InvestigationEntryID
                 };                
                 return reportDetails;
             }
@@ -77,6 +79,42 @@ namespace NEMESYS.Controllers
             return View(data);
         }
 
+        public async Task<InvestigationClass> GetInvestigationByID(int id)
+        {
+            var investigation = await _context.Investigations.FindAsync(id);
+
+            if (investigation != null)
+            {
+                var investigationDetails = new InvestigationClass()
+                {
+                    InvestigationDescription = investigation.InvestigationDescription,
+                    InvestigationID = investigation.InvestigationID,
+                    InvestigationDate = investigation.InvestigationDate,
+                    InvestigatorFirstName = investigation.InvestigatorFirstName,
+                    InvestigatorLastName = investigation.InvestigatorLastName,
+                    InvestigatorEmail = investigation.InvestigatorEmail,
+                    InvestigatorMobile = investigation.InvestigatorMobile,
+                    InvestigatingReportID = investigation.InvestigatingReportID
+                };
+                return investigationDetails;
+            }
+
+            return null;
+        }
+
+        [Route("Investigation-view/{id}", Name = "viewInvestigationEntryRoute")]
+        public async Task<ViewResult> ViewInvestigationEntry(int id)
+        {
+
+            //get report
+            var report = await _context.Reports.FindAsync(id);
+
+            //save investigation ID from report
+            int investigationID = Int32.Parse(report.InvestigationEntryID);
+
+            var data = await GetInvestigationByID(investigationID);
+            return View(data);
+        }
         public IActionResult Privacy()
         {
             return View();
@@ -422,6 +460,7 @@ namespace NEMESYS.Controllers
             report.ReporterFirstName = firstName.ToString();
             report.ReporterLastName = lastName.ToString();
             report.ReporterEmail = email.ToString();
+            report.InvestigationEntryID = "0";
 
             if (mobile!=null)
             {
