@@ -379,9 +379,20 @@ namespace NEMESYS.Controllers
         }
         
         [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
-        public IActionResult CreateInvestigationEntry()
+        public async Task<IActionResult> CreateInvestigationEntry(int id)
         {
-            return View();
+            //get report
+            var report = await _context.Reports.FindAsync(id);
+
+            if (String.Equals(report.InvestigationEntryID, "0"))
+            {
+                return View();
+            }
+            else
+            {
+                return View("HallOfFame");
+            }
+            
         }
 
         [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
