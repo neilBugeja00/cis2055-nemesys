@@ -348,7 +348,7 @@ namespace NEMESYS.Controllers
         [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateInvestigationEntry(InvestigationClass investigation)
+        public IActionResult CreateInvestigationEntry(InvestigationClass investigation, int id)
         {
             var user = _userManager.GetUserAsync(HttpContext.User);
 
@@ -363,6 +363,7 @@ namespace NEMESYS.Controllers
             investigation.InvestigatorFirstName = firstName;
             investigation.InvestigatorLastName = lastName;
             investigation.InvestigationDate = DateTime.Now.ToShortDateString();
+            investigation.InvestigatingReportID = id;
 
             if (mobile != null)
             {

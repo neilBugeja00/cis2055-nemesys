@@ -25,5 +25,7 @@ namespace NEMESYS.Models
 
         public string InvestigatorMobile { get; set; }
 
+        public int InvestigatingReportID { get; set; }
+
     }
 }
