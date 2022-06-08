@@ -27,7 +27,7 @@ namespace NEMESYS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddDbContext<ConnectionStringClass>(options => options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
+            services.AddDbContext<ConnectionStringClass>(options => options.UseSqlServer(Configuration.GetConnectionString("AuthDbContextConnection")));
             services.AddControllersWithViews()
                 .AddJsonOptions(o =>
                 {
