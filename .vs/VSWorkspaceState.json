@@ -6,6 +6,6 @@
     "\\NEMESYS\\Views",
     "\\NEMESYS\\Views\\Shared"
   ],
-  "SelectedNode": "\\NEMESYS\\Views\\Shared\\GetReportDetails.cshtml",
+  "SelectedNode": "\\NEMESYS\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }
