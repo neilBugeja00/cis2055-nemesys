@@ -18,16 +18,22 @@
                         <a asp-route="editInvestigationStatusRoute" asp-route-id="@report.ReportID"
                         class="btn-primary btn-sm btn-outline-secondary">Edit Report Status</a>
                     </div>
-                    <div class="btn-group">
-                        <a asp-route="createInvestigationEntryRoute" asp-route-id="@report.ReportID"
-                        class="btn-primary btn-sm btn-outline-secondary">Create Investigation Entry</a>
-                    </div>
-                    <div class="btn-group">
-                        <a asp-route="editInvestigationEntryRoute" asp-route-id="@report.ReportID"
-                        class="btn-primary btn-sm btn-outline-secondary">Edit / View Investigation Entry</a>
-                    </div>
-                    <small class="text-muted">@report.ReporterFirstName @report.ReporterLastName</small>
-                </div>
+                    @if (String.Equals(report.InvestigationEntryID , "0"))
+                    {    
+                        <div class="btn-group">
+                            <a asp-route="createInvestigationEntryRoute" asp-route-id="@report.ReportID"
+                            class="btn-primary btn-sm btn-outline-secondary">Create Investigation Entry</a>
+                            </div>
+                     }
+                     else
+                     {                            
+                         <div class="btn-group">
+                             <a asp-route="editInvestigationEntryRoute" asp-route-id="@report.ReportID"
+                             class="btn-primary btn-sm btn-outline-secondary">Edit / View Investigation Entry</a>
+                         </div>
+                     }
+                    <small class="text-muted">@report.ReporterFirstName @report.ReporterLastName</small>                    
+                 </div>
             </div>
         </div>
     </div>    

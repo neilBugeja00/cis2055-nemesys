@@ -12,12 +12,19 @@
         <div class="card mb-4 box-shadow">
             <div class="card-body">
                 <h3 class="card-title">@report.ReportTitle</h3>
+
+                @if (!String.Equals(report.InvestigationEntryID , "0"))
+                    {    
+                         <small class="text-muted">Report has an investigation entry!</small>
+                     }
+
                 <p class="card-text">@report.HazardDescription</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                         <a asp-route="reportDetailsRoute" asp-route-id="@report.ReportID"
                         class="btn-primary btn-sm btn-outline-secondary">View Details</a>
-                    </div>
+                    </div>                    
+
                     <small class="text-muted">@report.ReporterFirstName @report.ReporterLastName</small>
                 </div>
             </div>

@@ -3,9 +3,10 @@
     "",
     "\\NEMESYS",
     "\\NEMESYS\\Controllers",
+    "\\NEMESYS\\Models",
     "\\NEMESYS\\Views",
     "\\NEMESYS\\Views\\Shared"
   ],
-  "SelectedNode": "\\NEMESYS\\Controllers\\HomeController.cs",
+  "SelectedNode": "\\NEMESYS\\Models\\ConnectionStringClass.cs",
   "PreviewInSolutionExplorer": false
 }
