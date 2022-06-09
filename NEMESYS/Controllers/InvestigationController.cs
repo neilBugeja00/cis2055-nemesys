@@ -26,6 +26,7 @@ namespace NEMESYS.Controllers
         }
 
         //======================================= GET DETAILS OF INVESTIGATIONS =======================================
+
         public async Task<InvestigationClass> GetInvestigationByID(int id)
         {
             var investigation = await _context.Investigations.FindAsync(id);
@@ -50,6 +51,7 @@ namespace NEMESYS.Controllers
         }
 
         //======================================= GET DETAILS OF REPORTS =======================================
+
         public async Task<ReportClass> GetReportById(int id)
         {
             var report = await _context.Reports.FindAsync(id);
@@ -80,51 +82,38 @@ namespace NEMESYS.Controllers
             return null;
         }
 
+        //======================================= LINK INVESTIGATION WITH REPORT =======================================
 
-        //======================================= EDIT DESCRIPTION OF INVESTIGATION =======================================
-        [Route("editInvestigation-entry/{id}", Name = "editInvestigationEntryRoute")]
-        public async Task<IActionResult> EditInvestigationEntry(int id)
+        [Route("investigate-details/{id}", Name = "investigateReportRoute")]
+        public async Task<ViewResult> InvestigateReportDetails(int id)
         {
-            //get report
-            var report = await _context.Reports.FindAsync(id);
-            //save investigation ID from report
-            int investigationID = Int32.Parse(report.InvestigationEntryID);
-
-            var data = await GetInvestigationByID(investigationID);
+            var data = await GetReportById(id);
 
             return View(data);
         }
 
-        [Route("editInvestigation-entry/{id}", Name = "editInvestigationEntryRoute")]
+        [Route("investigate-details/{id}", Name = "investigateReportRoute")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditInvestigationEntry(int id, InvestigationClass investigationClass)
+        public async Task<IActionResult> InvestigateReportDetails(int id, int test)
         {
-            //get report
             var report = await _context.Reports.FindAsync(id);
 
-            //from report ID find the investigation
+            var user = _userManager.GetUserAsync(HttpContext.User);
 
-            int idInvestigation = Int32.Parse(report.InvestigationEntryID);
+            //getting data from logged in user
+            var email = user.Result.Email;
 
-            //finding investigation
-            var investigation = await _context.Investigations.FindAsync(idInvestigation);
-
-
-            //updating description
-            investigation.InvestigationDescription = investigationClass.InvestigationDescription;
-
-            //saving data
-            _cc.Update(investigation);
+            report.Investigator = email;
+            _cc.Update(report);
             _cc.SaveChanges();
-            ViewBag.messageInvestigationEditted = "The investigation has been editted successfully !";
-
-            return View(investigation);
+            ViewBag.messageReportInvestigated = "The report is being investigated by you !";
+            return View(report);
         }
 
 
-
         //======================================= EDIT STATUS OF INVESTIGATION =======================================
+
         [Route("investigatorStatus-edit/{id}", Name = "editInvestigationStatusRoute")]
         public async Task<ViewResult> EditInvestigationStatusRoute(int id)
         {
@@ -142,7 +131,7 @@ namespace NEMESYS.Controllers
             return View(data);
         }
 
-
+        
         [Route("investigatorStatus-edit/{id}", Name = "editInvestigationStatusRoute")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -175,22 +164,12 @@ namespace NEMESYS.Controllers
 
 
 
-
         //======================================= CREATION OF INVESTIGATION =======================================
+
         [Route("investigation-entry/{id}", Name = "createInvestigationEntryRoute")]
         public async Task<IActionResult> CreateInvestigationEntry(int id)
         {
-            //get report
-            var report = await _context.Reports.FindAsync(id);
-
-            if (String.Equals(report.InvestigationEntryID, "0"))
-            {
-                return View();
-            }
-            else
-            {
-                return View("HallOfFame");
-            }
+            return View();
 
         }
 
@@ -238,6 +217,50 @@ namespace NEMESYS.Controllers
         }
 
 
+
+        //======================================= EDIT DESCRIPTION OF INVESTIGATION =======================================
+        [Route("editInvestigation-entry/{id}", Name = "editInvestigationEntryRoute")]
+        public async Task<IActionResult> EditInvestigationEntry(int id)
+        {
+            //get report
+            var report = await _context.Reports.FindAsync(id);
+            //save investigation ID from report
+            int investigationID = Int32.Parse(report.InvestigationEntryID);
+
+            var data = await GetInvestigationByID(investigationID);
+
+            return View(data);
+        }
+
+        [Route("editInvestigation-entry/{id}", Name = "editInvestigationEntryRoute")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditInvestigationEntry(int id, InvestigationClass investigationClass)
+        {
+            //get report
+            var report = await _context.Reports.FindAsync(id);
+
+            //from report ID find the investigation
+
+            int idInvestigation = Int32.Parse(report.InvestigationEntryID);
+
+            //finding investigation
+            var investigation = await _context.Investigations.FindAsync(idInvestigation);
+
+
+            //updating description
+            investigation.InvestigationDescription = investigationClass.InvestigationDescription;
+
+            //saving data
+            _cc.Update(investigation);
+            _cc.SaveChanges();
+            ViewBag.messageInvestigationEditted = "The investigation has been editted successfully !";
+
+            return View(investigation);
+        }  
+
+
+
         //======================================= VIEW DETAILS OF INVESTIGATION =======================================
         [Route("Investigation-view/{id}", Name = "viewInvestigationEntryRoute")]
         public async Task<ViewResult> ViewInvestigationEntry(int id)
@@ -251,36 +274,7 @@ namespace NEMESYS.Controllers
 
             var data = await GetInvestigationByID(investigationID);
             return View(data);
-        }
-
-
-        //======================================= LINK INVESTIGATION WITH REPORT =======================================
-        [Route("investigate-details/{id}", Name = "investigateReportRoute")]
-        public async Task<ViewResult> InvestigateReportDetails(int id)
-        {
-            var data = await GetReportById(id);
-
-            return View(data);
-        }
-
-        [Route("investigate-details/{id}", Name = "investigateReportRoute")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> InvestigateReportDetails(int id, int test)
-        {
-            var report = await _context.Reports.FindAsync(id);
-
-            var user = _userManager.GetUserAsync(HttpContext.User);
-
-            //getting data from logged in user
-            var email = user.Result.Email;
-
-            report.Investigator = email;
-            _cc.Update(report);
-            _cc.SaveChanges();
-            ViewBag.messageReportEditted = "The report " + report.ReportTitle + " is being investigated by you !";
-            return View("HallOfFame");
-        }
+        }        
 
     }
 }

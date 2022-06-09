@@ -34,7 +34,6 @@ namespace NEMESYS.Models
         public byte[] HazardPhoto { get; set; }
         public string HazardUpvotes { get; set; }       
 
-        //setting to int will cause error as program is getting NULL from db which is not compatible with int ... may need if null set to 0
         public string Investigator { get; set; }
 
         public string InvestigationEntryID { get; set; }
