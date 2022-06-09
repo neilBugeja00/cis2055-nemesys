@@ -1019,3 +1019,4 @@ C:\Users\neilb\Desktop\Neil\Web Final\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\
 C:\Users\neilb\Desktop\Neil\Web Final\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Investigation\ViewInvestigationEntry.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web Final\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Report\EditReport.cshtml.g.cs
 C:\Users\neilb\Desktop\Neil\Web Final\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Report\GetReportDetails.cshtml.g.cs
+C:\Users\neilb\Desktop\Neil\Web Final\Web2\NEMESYS\obj\Debug\net5.0\Razor\Views\Shared\DeleteConfirm.cshtml.g.cs
