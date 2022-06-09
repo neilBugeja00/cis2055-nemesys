@@ -250,7 +250,12 @@ namespace NEMESYS.Controllers
 
         public IActionResult HallOfFame()
         {
-            return View();
+            List<NEMESYSUser> users = new List<NEMESYSUser>();
+            users = _userManager.Users.ToList();
+
+            List<NEMESYSUser> SortedList = users.OrderByDescending(o => o.NumberOfReports).ToList();
+
+            return View(SortedList);
         }
 
         [Authorize(Roles = "Investigator")]
