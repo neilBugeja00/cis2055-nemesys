@@ -10,6 +10,8 @@ namespace NEMESYS.Areas.Identity.Data
     // Add profile data for application users by adding properties to the NEMESYSUser class
     public class NEMESYSUser : IdentityUser
     {
+        int number = 0;
+
         [PersonalData]
         [Column(TypeName ="nvarchar(100)")]
         public string FirstName { get; set; }
@@ -17,5 +19,19 @@ namespace NEMESYS.Areas.Identity.Data
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
         public string LastName { get; set; }
+
+        [PersonalData]
+        [Column(TypeName = "int")]
+        public int NumberOfReports
+        {
+            get
+            {
+                return this.number;
+            }
+            set
+            {
+                this.number = value;
+            }
+        }
     }
 }

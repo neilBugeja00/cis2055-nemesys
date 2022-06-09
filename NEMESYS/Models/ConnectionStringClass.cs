@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NEMESYS.Areas.Identity.Data;
 
 namespace NEMESYS.Models
 {

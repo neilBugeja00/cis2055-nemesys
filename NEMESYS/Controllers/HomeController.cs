@@ -511,6 +511,7 @@ namespace NEMESYS.Controllers
             var firstName = user.Result.FirstName;
             var lastName = user.Result.LastName;
             var mobile = user.Result.PhoneNumber;
+            var numberOfReports = user.Result.NumberOfReports;
 
             //manually inputting data into report
             report.ReportDate = DateTime.Now.ToShortDateString();
@@ -537,10 +538,13 @@ namespace NEMESYS.Controllers
                 report.HazardType = "Equipment";
             }
 
+            //Incrementing number of reports by 1
+            user.Result.NumberOfReports = numberOfReports++;
+
             //saving data
-            _cc.Add(report);
+            _cc.Add(report);            
             _cc.SaveChanges();
-            ViewBag.messageReportSubmitted = "The report " + report.ReportTitle + " is saved successfully !";
+            ViewBag.messageReportSubmitted = "The report '" + report.ReportTitle + "' is saved successfully !";
             return View(report);
         }
 
