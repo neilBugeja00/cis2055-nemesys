@@ -5,8 +5,8 @@
     "\\NEMESYS\\Controllers",
     "\\NEMESYS\\Models",
     "\\NEMESYS\\Views",
-    "\\NEMESYS\\Views\\Shared"
+    "\\NEMESYS\\Views\\Investigation"
   ],
-  "SelectedNode": "\\NEMESYS\\Models\\ConnectionStringClass.cs",
+  "SelectedNode": "\\NEMESYS\\Controllers\\ReportController.cs",
   "PreviewInSolutionExplorer": false
 }
